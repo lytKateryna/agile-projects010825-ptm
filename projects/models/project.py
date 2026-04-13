@@ -11,10 +11,14 @@ class Project(models.Model):
     created_at = models.DateField(
         auto_now_add=True
     )
+
     class Meta:
         db_table = 'projects'
         verbose_name = "Проект"
         verbose_name_plural = "Проекты"
         ordering = ['-name']
-        unique_together = ('name','created_at')
+        unique_together = ('name', 'created_at')
 
+    @property
+    def count_of_files(self):
+        return self.files.count()
