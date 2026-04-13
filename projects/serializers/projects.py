@@ -14,7 +14,7 @@ class ProjectListSerializer(serializers.ModelSerializer):
 
 
 class CreateProjectSerializer(serializers.ModelSerializer):
-   created_at = serializers.DateTimeField(read_only=True)
+   created_at = serializers.DateField(read_only=True)
 
    class Meta:
        model = Project

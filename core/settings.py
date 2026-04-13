@@ -32,9 +32,11 @@ INSTALLED_APPS = [
 
     #3rd-party
     'rest_framework',
+    'django_filters',
 
     # local
     'projects.apps.ProjectsConfig',
+
 ]
 
 MIDDLEWARE = [
